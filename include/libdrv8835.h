@@ -44,7 +44,6 @@ static void __on_startup() {
 }
 
 static inline void setSpeed(char motor_pin,int *dir_pin, int percent) {
-
     if(percent < 0) {
         *dir_pin = 1;
         percent = -1*percent;
@@ -60,7 +59,6 @@ static inline void setSpeed(char motor_pin,int *dir_pin, int percent) {
 
     digitalWrite(motor_pin -7, *dir_pin);
     pwmWrite(motor_pin, percent);
-
 }
 
 
